@@ -6,9 +6,14 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 9090;
 const cors=require("cors");
-app.use(cors({
-  origin:'https://moviemerve.onrender.com/'
-}));
+
+const corsOptions ={
+  origin:'*', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions));
 app.use(BodyParser.json());
 // app.use(routes);
 // const router1 = express.Router();
