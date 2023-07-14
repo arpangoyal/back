@@ -1,5 +1,4 @@
 const Router = require("express").Router();
-
 const MovieData = require("../models/MovieData");
 
 Router.post("/add", async (req, res) => {
