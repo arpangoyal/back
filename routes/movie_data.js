@@ -108,7 +108,7 @@ Router.delete("/delete/:id", async (req, res) => {
 Router.post("/fetch", async (req, res) => {
   try {
     const data = await MovieData.find();
-    // console.log(data);
+    console.log(data);
     res.send(data);
     res.json(data);
   } catch (err) {
